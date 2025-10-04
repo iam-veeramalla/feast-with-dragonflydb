@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: feast-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - feast-network
+
+  dragonfly:
+    image: docker.dragonflydb.io/dragonflydb/dragonfly:latest
+    container_name: feast-dragonfly
+    ports:
+      - "6380:6379"
+    networks:
+      - feast-network
+    ulimits:
+      memlock: -1
+    volumes:
+      - dragonfly-data:/data
+
+networks:
+  feast-network:
+    driver: bridge
+
+volumes:
+  dragonfly-data:

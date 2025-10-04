@@ -1,0 +1,7 @@
+project: feast_redis_demo
+registry: data/registry.db
+provider: local
+online_store:
+  type: redis
+  connection_string: "localhost:6380"
+entity_key_serialization_version: 2

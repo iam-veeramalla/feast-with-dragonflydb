@@ -1,0 +1,4 @@
+feast==0.38.0
+redis==5.0.1
+pandas==2.1.4
+numpy==1.26.2
