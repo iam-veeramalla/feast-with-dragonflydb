@@ -70,14 +70,6 @@ This demonstrates the migration by:
 - Fetching features from DragonflyDB
 - Showing that everything works identically!
 
-### Step 6 (Optional): Compare Performance
-
-```bash
-python compare_performance.py
-```
-
-Benchmark feature retrieval performance between Redis and DragonflyDB.
-
 ## 📁 Project Structure
 
 ```
